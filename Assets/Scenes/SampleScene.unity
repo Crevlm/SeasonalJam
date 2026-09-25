@@ -628,9 +628,10 @@ GameObject:
   - component: {fileID: 799760430}
   - component: {fileID: 799760429}
   - component: {fileID: 799760428}
-  m_Layer: 0
+  - component: {fileID: 799760433}
+  m_Layer: 6
   m_Name: Crow_Test
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -740,12 +741,24 @@ Transform:
   m_GameObject: {fileID: 799760427}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.44, y: 3.15, z: 9.26}
+  m_LocalPosition: {x: 6.47, y: 1.8, z: 8.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &799760433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799760427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982131d1f3f8d654893418b5c97fb741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
 --- !u!1001 &830398481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1235,6 +1248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1760480036}
   - component: {fileID: 1760480037}
+  - component: {fileID: 1760480038}
   m_Layer: 0
   m_Name: Scarecrow
   m_TagString: Untagged
@@ -1273,6 +1287,25 @@ MonoBehaviour:
   mainCamera: {fileID: 330585545}
   rotationPivot: {fileID: 1895903164}
   rotationSpeed: 5
+--- !u!114 &1760480038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760480035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7360dc042ffc4c48bdadb390a47f270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScareAttack
+  scareRange: 15
+  scareAngle: 60
+  knockbackStrength: 2
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  rotationPivot: {fileID: 1895903164}
 --- !u!1001 &1831349012
 PrefabInstance:
   m_ObjectHideFlags: 0
